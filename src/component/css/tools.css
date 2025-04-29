@@ -1,0 +1,45 @@
+/* Tools.css */
+.tools-container {
+  padding: 30px;
+  text-align: center;
+}
+
+.tools-container h1 {
+  color: #00ffe7;
+  margin-bottom: 20px;
+}
+
+.input-field {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 10px;
+  margin-right: 10px;
+  border: none;
+  outline: none;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #ff00c8;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background-color: #d100a9;
+}
+
+.result-box {
+  margin-top: 30px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 20px;
+  color: white;
+}
+
+.result-box h2 {
+  margin-bottom: 15px;
+}

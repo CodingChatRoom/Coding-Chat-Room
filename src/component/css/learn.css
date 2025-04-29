@@ -1,0 +1,131 @@
+/* Container */
+.learn-container {
+  padding: 50px 20px;
+  /* background: #0f0f0f; */
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.learn-hero {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.learn-heading {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #00f7ff;
+  text-shadow: 0 0 10px #00f7ff, 0 0 20px #00f7ff;
+  margin-bottom: 20px;
+}
+
+.learn-subtext {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+.learn-subtext span {
+  color: #ff00ff;
+  font-weight: bold;
+}
+
+/* Categories Section */
+.learn-categories {
+  text-align: center;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.category-card {
+  background: #1a1a1a;
+  border: 2px solid #00f7ff;
+  border-radius: 12px;
+  padding: 30px 20px;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.4s;
+  box-shadow: 0 0 10px #00f7ff88, 0 0 20px #00f7ff44;
+}
+
+.category-card:hover {
+  background: #00f7ff22;
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px #00f7ff, 0 0 40px #00f7ff;
+}
+
+.category-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #00f7ff;
+  text-shadow: 0 0 5px #00f7ff;
+}
+
+.category-card p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* CTA Section */
+.learn-cta {
+  margin-top: 70px;
+  text-align: center;
+}
+
+.start-learning-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: linear-gradient(90deg, #00f7ff, #ff00ff);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: 0.4s;
+  box-shadow: 0 0 10px #00f7ff88, 0 0 20px #ff00ff44;
+}
+
+.start-learning-button:hover {
+  background: linear-gradient(90deg, #ff00ff, #00f7ff);
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #ff00ff, 0 0 40px #00f7ff;
+}
+
+/* About Channel Section */
+.about-channel {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.about-description {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  color: #bbb;
+}
+
+.highlight {
+  color: #00f7ff;
+  font-weight: bold;
+  text-shadow: 0 0 5px #00f7ff;
+}
+
+/* Responsive Text Sizes */
+@media (max-width: 768px) {
+  .learn-heading {
+    font-size: 2.5rem;
+  }
+
+  .learn-subtext {
+    font-size: 1rem;
+  }
+}
+
+

@@ -1,0 +1,159 @@
+/* Header Styling */
+.header-container {
+  width: 100%;
+  background-color: #151e1fd1;
+  position: relative; 
+  z-index: 1000; /* Ensure the header is above other content */
+  box-shadow: 0px 0px 10px #00eeff66;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.logo-name {
+  font-size: 1.3rem; /* Slightly smaller font for the logo */
+  color: #00f0ff;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}   
+
+.logo-name:hover {
+  color: #ff4d4d;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  transition: transform 0.5s ease-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transform: translateY(-100%); 
+  opacity: 0;
+  visibility: hidden; /* hide it completely */
+  pointer-events: none; /* prevent clicks */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;  
+}
+
+.navbar.active {
+  transform: translateY(0); /* Slide down when active */
+  opacity: 1; /* Make visible */
+  visibility: visible; /* Now visible */
+  pointer-events: auto; /* Allow clicking */
+}
+
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  position: relative;
+  left: 30%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  /* display: none; */
+}
+
+.nav-link {
+  margin: 15px 0;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out, transform 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #00ffe7;  /* Change color on hover */
+  transform: scale(1.1);  /* Slightly scale up */
+  text-shadow: 0 0 10px rgba(0, 255, 231, 0.8);  /* Add a glowing effect */
+}
+
+
+/* Burger Menu Icon */
+.burger-icon {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 4px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.burger-icon.open .line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger-icon.open .line:nth-child(2) {
+  opacity: 0; 
+}
+
+.burger-icon.open .line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.burger-icon .line {
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Large Screen */
+@media (min-width: 769px) {
+  .navbar {
+    display: flex;
+    position: static; /* Make the navbar static on larger screens */
+    transform: translateY(0); /* RESET this */
+    opacity: 1; /* Always visible */
+    visibility: visible; /* RESET this */
+    pointer-events: auto; /* RESET this */
+  }
+
+  .nav-links {
+    flex-direction: row; /* Display the nav items in a row */
+  }
+
+  .burger-icon {
+    display: none; 
+  }
+}
+
+
+/* Small Screen */
+@media (max-width: 768px) {
+  .navbar {
+    display: block; /* Show the navbar only when active */
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    position: fixed;
+    left: 0px;
+    top: 40px;
+    background: linear-gradient(to right, rgba(9, 0, 19, 0.829) , rgb(0, 21, 23) , rgba(15, 0, 0, 0.889));
+    padding: 30px 0;
+  }
+
+  .burger-icon {
+    display: flex;
+  }
+}
+
+/* For screens wider than 426px */
+@media (min-width: 427px) and (max-width: 769px) {
+  .burger-icon {
+    display: flex;
+    position: relative;
+    right: 30px;
+  }
+}

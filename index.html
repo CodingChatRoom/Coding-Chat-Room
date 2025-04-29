@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/channel-logo.jpg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coding Chat Room</title>
+
+    <style>
+
+html, body {
+  height: 100%;  /* Ensure full height */
+  margin: 0;     /* Remove default margins */
+  /* overflow-x: hidden;  */
+}
+
+#particles-js {
+  position: fixed;  /* Fix particles to the screen */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;  /* Full height of the page */
+  z-index: -1;   /* Behind the main content */
+  overflow: hidden;
+}
+
+body {
+  background: linear-gradient(to right, #2c3e50, #6a1b9a , rgb(25, 60, 87) , rgb(33, 22, 73));
+  color: white;
+}
+
+
+
+    </style>
+  </head>
+  <body>
+  <!-- Particles background -->
+  <div id="particles-js"></div>
+  
+  <!-- Main React app will render here -->
+  <div id="root"></div>
+  
+  <!-- Particles.js Library -->
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  
+  <!-- Particles initialization script -->
+  <script>
+   particlesJS("particles-js", {
+      particles: {
+        number: {
+          value: 80,
+          density: { enable: true, value_area: 800 }
+        },
+        color: { value: "#00ffe7" },
+        shape: {
+          type: "circle",
+          stroke: { width: 0, color: "#000000" },
+        },
+        opacity: {
+          value: 0.5,
+          random: true,
+        },
+        size: {
+          value: 4,
+          random: true,
+        },
+        line_linked: {
+          enable: true,
+          distance: 150,
+          color: "#00ffe7",
+          opacity: 0.4,
+          width: 1
+        },
+        move: {
+          enable: true,
+          speed: 3,
+          direction: "none",
+          random: false,
+          straight: false,
+          out_mode: "out",
+        }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: {
+          onhover: { enable: true, mode: "grab" },
+          onclick: { enable: true, mode: "push" },
+        },
+        modes: {
+          grab: { distance: 200, line_linked: { opacity: 0.5 } },
+          push: { particles_nb: 4 }
+        }
+      },
+      retina_detect: true
+    });
+
+
+  </script>
+  
+  <!-- React App JS (Main JSX file) -->
+  <script type="module" src="/src/main.jsx"></script>
+
+  </body>
+</html>
